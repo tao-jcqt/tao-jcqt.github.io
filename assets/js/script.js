@@ -157,3 +157,20 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+const projectLink = document.querySelector('.project-link');
+const modal = document.querySelector('#project-modal');
+const modalClose = document.querySelector('#modal-close');
+
+projectLink.addEventListener('click', e => {
+  e.preventDefault();
+  modal.style.display = 'flex';
+});
+
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+modal.addEventListener('click', e => {
+  if (e.target === modal) modal.style.display = 'none';
+});
